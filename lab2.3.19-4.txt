@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    int n;
+    long x =1;
+    double y =1;
+    cout<<"Enter degree 2(it has to be between -13 and 63) : ";
+    cin>>n;
+    if(n<=63 && n>=1){
+        int i;
+        for (i=1; i<=n; i++){
+            x=x*2;
+        }
+        cout<<x;
+    }
+       if(n>=-20 && n<=0){
+        int j;
+        for (j=1; j<=n*(-1); j++){
+            x=x*2;
+            y = 1./x;
+            
+            
+        }
+        
+        cout<<setprecision(20)<<y;
+        
+    }}
+    
