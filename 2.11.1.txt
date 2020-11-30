@@ -1,0 +1,38 @@
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+struct Time
+{
+	int hour;
+	int minute;
+	int period;
+	int time;
+};
+
+int main()
+{
+
+	Time start;
+	
+	cout << "Enter hours: ";
+	cin >> start.hour;
+	cout << "\nEnter minutes: ";
+	cin >> start.minute;
+	cout << "\nEnter period of time (in minutes): ";
+	cin >> start.period;
+
+	time end;
+	end.time = start.hour*60 + start.minute + start.period;
+	end.hour = end.time/60;
+	end.minute = end.time%60;
+	while (end.hour>=24){
+	    end.hour=end.hour%24;
+	}
+	
+	
+	cout << end.hour << ":"<< end.minute<< endl;
+}
